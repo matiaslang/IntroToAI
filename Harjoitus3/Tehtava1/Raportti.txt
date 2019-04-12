@@ -1,0 +1,4 @@
+Kysymys1:
+Arvioi kaikkien luokittelijoiden luokitteluraportteja tarkastelemalla,
+mitkä kolme luoduista luokittelijoista ovat parhaita tämän ongelman
+ratkaisemiseksi luokittelutarkkuuden (engl. accuracy) perusteella?
