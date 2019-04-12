@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from sklearn.externals import joblib
 from sklearn import datasets
 from skimage.feature import hog
