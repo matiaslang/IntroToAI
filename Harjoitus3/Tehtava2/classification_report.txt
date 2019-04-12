@@ -1,0 +1,23 @@
+Accuracy for classifier Linear-SVM-Classifier: 1.0
+
+
+Classification report for classifier Linear-SVM-Classifier:
+              precision    recall  f1-score   support
+
+           1       1.00      1.00      1.00        10
+           2       1.00      1.00      1.00        13
+           3       1.00      1.00      1.00         6
+           4       1.00      1.00      1.00        11
+
+   micro avg       1.00      1.00      1.00        40
+   macro avg       1.00      1.00      1.00        40
+weighted avg       1.00      1.00      1.00        40
+
+
+Confusion matrix for classifier Linear-SVM-Classifier:
+[[10  0  0  0]
+ [ 0 13  0  0]
+ [ 0  0  6  0]
+ [ 0  0  0 11]]
+
+

@@ -1,0 +1,14 @@
+Käsimerkit:
+-gesture1 = nyrkki
+-gesture2 = 2 sormea ylhäällä
+-gesture3 = middlefinger up
+-gesture4 = L shape (on her forhead)
+
+Kysymys1:
+
+Karkea arvioitu C:n arvo: 10^-2 == 0.01
+
+Kysymys 2 - Miksi testijoukko erotettiin datajoukosta aivan prosessin alussa eikä vasta ristiinvalidoinnin jälkeen?
+
+- Mikäli testijoukko on mukana opetusjoukossa, niin silloinhan AI on opetettu osaksi joukolla jolla sitä on tarkoitus testata. Tällöin testijoukko on AI:lle jo "tuttu" joka aiheuttaisi mitä todennäköisimmin oikeita tuloksia, mutta näillä tuloksilla ei tee mitään. Testijoukon tulee olla ennestään tuntematon.
+
