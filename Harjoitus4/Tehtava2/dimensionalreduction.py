@@ -51,8 +51,9 @@ def MinMax_normalization(data):
     Toteutetaan datan normalisointi niin, että arvot sijoittuvat x-akselin ja y-akselin välille [0,1]
     """
     #-------TÄHÄN SINUN KOODI--------
-    
-    
+    X_min, X_max = np.min(data, 0), np.max(data, 0)
+    X_scaled = (data - X_min) / (X_max - X_min)
+    return X_scaled
     #--------------------------------
 	
 def Train_model(X_data,  params, model):
@@ -73,8 +74,10 @@ def Train_model(X_data,  params, model):
     elif model == 'UMAP':
         X_reduced_data = umap.UMAP(n_neighbors=params[1], min_dist=params[2], metric='correlation').fit_transform(X_data)
     #-------TÄHÄN SINUN KOODI--------
-    
-    
+    t1 = time()
+    deltatime = t1 - t0
+    X_scaled = MinMax_normalization(X_reduced_data)
+    return X_scaled, deltatime
     #--------------------------------
 	
 def Evaluation(X_data, labels):
