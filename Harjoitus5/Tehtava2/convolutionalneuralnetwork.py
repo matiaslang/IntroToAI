@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: iso-8859-15 -*-
 import keras
 from keras.datasets import cifar10
 from keras.models import Sequential
@@ -91,8 +93,32 @@ def model2():
     Tässä funktiossa on toteutettu mallin 2 konvoluutioneuroverkon rakenne
     """
     #-------TÄHÄN SINUN KOODI--------  
-    
-    
+    model = Sequential()
+    model.add(Conv2D(32, (3, 3), padding="same", input_shape=x_train.shape[1:]))
+    model.add(Activation('relu'))
+    model.add(Conv2D(32, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(Conv2D(32, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Conv2D(64, (3, 3), padding="same"))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, (3 ,3)))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, (3, 3)))
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Flatten())
+    model.add(Dense(1024))
+    model.add(Activation('relu'))
+    model.add(Dense(100))
+    model.add(Activation('relu'))
+
+    model.add(Dense(num_classes))
+    model.add(Activation('softmax'))
+    return model
     #--------------------------------
 
 parser = ap.ArgumentParser()
